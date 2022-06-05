@@ -11,7 +11,7 @@ const Home = () => {
         theme === "dark" && "dark"
       }`}
     >
-      <div className="bg-white dark:bg-[#0E1118] dark:text-slate-200 h-[90vh] w-full pt-[5%]">
+      <div className="bg-white dark:bg-[#0E1118] dark:text-slate-200 h-[90vh] w-full pt-[5%] px-0 mx-0">
         <div className=" max-w-6xl lg:flex  lg:mx-auto  text-3xl font-bold   ">
           <div className="relative px-3 text-6xl sm:text-7xl md:text-8xl lg:text-6xl  xl:text-7xl 2xl:text-7xl w-full lg:w-1/2   ">
             የመጸሃፍ <span className="block">ጥርቅምህን እዚ ላይ አስቀምጥ</span>{" "}
