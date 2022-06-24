@@ -9,11 +9,13 @@ app.use(express.json());
 app.use(cors());
 app.use("/books", router);
 
+const PORT = process.env.PORT || 5000;
+
 const connString = process.env.MONGO_URI;
 mongoose
   .connect(connString)
   .then(() => console.log("Connected to database"))
   .then(() => {
-    app.listen(5000);
+    app.listen({ port: PORT });
   })
   .catch((err) => console.log("Not Connected to the database", err));
