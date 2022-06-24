@@ -1,6 +1,8 @@
 Bookstore app
 
-for this app to work in your local computer, you need to create a mongo database and create an environment variable and add the connection string with the name **MONGO_URI**.
+for this app to work in your local computer, you need to create a mongo database and create an environment variable and add the connection string with the name **MONGO_URI** and uncomment the localhost from the files in the **pages** folder 
+
+
 then run the app.js in the Backend folder 
 
     node app.js 
@@ -20,6 +22,9 @@ install heroku cli
 heroku login // this will coonect us to our heroku credential 
 heroku create // created a new heroku app 
 ```
+after you create the heroku app, you use the new created API url as an environment variable either on vercel or netlify with the name 
+**REACT_APP_HEROKU_URI** : your_herokuapp_string
+
 we need to configure some environment varibale for the server side in this case we need to set the  **MONGO_URI**
 
 ```
