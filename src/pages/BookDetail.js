@@ -18,7 +18,7 @@ const BookDetail = () => {
 
   const [checked, setChecked] = React.useState(false);
 
-  const URI = `http://localhost:5000/books/${id}`;
+  const URI = `${process.env.REACT_APP_HEROKU_URI}/books/${id}`;
 
   React.useEffect(() => {
     const fetchHandler = async () => {
@@ -33,7 +33,7 @@ const BookDetail = () => {
 
   const sendRequest = async () => {
     await axios
-      .put(`http://localhost:5000/books/${id}`, {
+      .put(URI, {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
@@ -59,7 +59,7 @@ const BookDetail = () => {
 
   const deleteHandler = () => {
     axios
-      .delete(`http://localhost:5000/books/${id}`)
+      .delete(URI)
       .then((res) => res.data)
       .then(() => navigate("/books"));
   };

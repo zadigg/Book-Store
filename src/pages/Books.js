@@ -3,7 +3,8 @@ import axios from "axios";
 import Book from "../components/Book";
 import { useTheme } from "../context/ThemeContext";
 
-const URL = "http://localhost:5000/books";
+// const URL = "http://localhost:5000/books/";
+const URL = `${process.env.REACT_APP_HEROKU_URI}/books`;
 
 const Books = () => {
   const { theme } = useTheme();
@@ -25,7 +26,7 @@ const Books = () => {
           <div className="flex justify-center items-center h-[85vh]">
             <svg
               role="status"
-              class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
               viewBox="0 0 100 101"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

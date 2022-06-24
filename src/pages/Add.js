@@ -14,6 +14,9 @@ const Add = () => {
     author: "",
   });
 
+  // const URL = "http://localhost:5000/books/";
+  const URL = `${process.env.REACT_APP_HEROKU_URI}/books`;
+
   const [checked, setChecked] = React.useState(false);
 
   const handleChange = (e) => {
@@ -26,7 +29,7 @@ const Add = () => {
 
   const sendRequest = async () => {
     await axios
-      .post("http://localhost:5000/books/", {
+      .post(URL, {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
