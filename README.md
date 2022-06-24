@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+Bookstore app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+for this app to work in your local computer, you need to create a mongo database and create an environment variable and add the connection string with the name **MONGO_URI**.
+then run the app.js in the Backend folder 
 
-## Available Scripts
+    node app.js 
+now as the backend is running you can you can start the frontend in the root folder 
 
-In the project directory, you can run:
+    npm start 
 
-### `npm start`
+if you want to run the backend on HEROKU 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Backend repo](https://github.com/zadigg/Bookstore-Heroku-backend-)
+clone the above repo and do the following(**Note:** the heroku app.js file is not the same with this one, there are some minor changes to make it compatable with heroku )
+install heroku cli 
+**Usage:** https://devcenter.heroku.com/articles/heroku-cli
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    npm install -g heroku
+```
+heroku login // this will coonect us to our heroku credential 
+heroku create // created a new heroku app 
+```
+we need to configure some environment varibale for the server side in this case we need to set the  **MONGO_URI**
 
-### `npm test`
+```
+heroku config:set MONGO_URI=your_mongo_db_connection_string  
+```
+then push it to your heroku
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git add .
+git commit -m "any msg u want" 
+git push heroku master 
+```
 
-### `npm run build`
+then push the client side and deploy it either on  **Vercel**  or  **Netlify**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Author: Abel Kibebe
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Gmail:  [abelkibebe5@gmail.com](mailto:abelkibebe5@gmail.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Phone: 251924029960
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
