@@ -2,6 +2,8 @@ Bookstore app
 
 for this app to work in your local computer, you need to create a mongo database and create an environment variable and add the connection string with the name **MONGO_URI** and uncomment the localhost from the files in the **pages** folder 
 
+![image](https://user-images.githubusercontent.com/62830716/175645089-7118009f-9fa6-4148-a958-a188846d71e5.png)
+
 
 then run the app.js in the Backend folder 
 
